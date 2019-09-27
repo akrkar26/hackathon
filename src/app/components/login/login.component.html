@@ -1,0 +1,24 @@
+<div class="login">
+<p-toast></p-toast>
+<p-card >
+    <div class="ui-g">
+        <div class="ui-g-4 top-spacing">
+            <span class="ui-float-label">
+                <input id="float-input" type="text" size="30" pInputText [(ngModel)]="userName">
+                <label for="float-input">User Name</label>
+            </span>
+        </div>
+        <div class="ui-g-4 top-spacing">
+            <span class="ui-float-label">
+                <input id="float-input" type="password" size="30" pInputText [(ngModel)]="password">
+                <label for="float-input">Password</label>
+            </span>
+        </div>
+        <div class="ui-g-4 top-spacing">
+            <button pButton type="button" label="Login"  (click)="_login()"></button>
+        </div>
+    </div>
+    
+</p-card>
+
+</div>

@@ -1,0 +1,9 @@
+<p-card>
+    <div class="search">
+        <input type="text" pInputText [(ngModel)]="searchText"/>
+        <button pButton type="button" label="Search Customer" (click)="_searchCustomer()"></button>
+    </div>
+</p-card>
+<div *ngIf="searchedCustomers.length > 0" class="customer-list">
+    <app-customer-list [customers]="searchedCustomers"></app-customer-list>
+</div>

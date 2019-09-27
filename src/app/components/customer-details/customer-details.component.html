@@ -1,0 +1,33 @@
+<div class="customer-details">
+    <p-toast></p-toast>
+    <p-card>
+        <div class="ui-g">
+            <div class="ui-g-4">Account Number: <strong>{{customer?.accountNumber}}</strong></div>
+            <div class="ui-g-4">Account type: {{customer?.accountType}}</div>
+            <div class="ui-g-4">Customer Id: {{customer?.accountId}}</div>
+            <div class="ui-g-4">Customer Name: <strong>{{customer?.firstName}} {{customer?.lastName}}</strong></div>
+            <div class="ui-g-4">Date Of Birth: {{customer?.dateOfBirth}}</div>
+            <div class="ui-g-4">Gender: {{customer?.gender}}</div>
+        </div>
+    </p-card>
+    <p-card>
+        <div class="ui-g">
+            <div class="ui-g-12">Mortgage type: <strong>Buy new property</strong></div>
+            <div class="ui-g-4 top-spacing">
+                <span class="ui-float-label">
+                    <input id="float-input" type="text" size="30" pInputText [(ngModel)]="propertyCost"> 
+                    <label for="float-input">Property Cost</label>
+                </span>
+            </div>
+            <div class="ui-g-4 top-spacing">
+                <span class="ui-float-label">
+                    <input id="float-input" type="text" size="30" pInputText [(ngModel)]="depositAmount"> 
+                    <label for="float-input">Deposit amount</label>
+                </span>
+            </div>
+            <div class="ui-g-4 top-spacing">
+                <button pButton type="button" label="Create Mortgage Account"  (click)="_createMortgage()"></button>
+            </div>
+        </div>
+    </p-card>
+</div>

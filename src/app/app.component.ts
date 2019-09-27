@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hackathon';
+
+  constructor() {
+    let user = [{userName: 'atul', password: 'atul', userType: 'U'}, {userName: 'dinesh', password: 'dinesh', userType: 'A'}];
+
+    localStorage.clear();
+    localStorage.setItem('users', JSON.stringify(user));
+  }
+  
 }
