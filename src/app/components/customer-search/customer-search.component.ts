@@ -14,14 +14,15 @@ export class CustomerSearchComponent implements OnInit {
   constructor(private _customerService: CustomerService) { }
 
   ngOnInit() {
-    
+
   }
 
   private _searchCustomer() {
 
-    // this._customerService.searchCustomers(this.searchText).subscribe((response) => {
-
-    // });
+    this.searchedCustomers = [];
+    this._customerService.searchCustomers(this.searchText).subscribe((response: any) => {
+      this.searchedCustomers = response;
+    });
     let mockData = [
       {
         "accountId": "1",
@@ -55,7 +56,7 @@ export class CustomerSearchComponent implements OnInit {
       }
     ]
 
-    this.searchedCustomers = mockData;
+    //this.searchedCustomers = mockData;
   }
 
 }

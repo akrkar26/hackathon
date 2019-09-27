@@ -29,7 +29,8 @@ export class CustomerDetailsComponent implements OnInit {
 
     let validity: boolean = this._validateDepositAmount();
     if (validity) {
-      this._custService.createMortagage(this.customer.accountNumber).subscribe((response) => {
+      this._custService.createMortagage(this.customer.customerNumber).subscribe((response) => {
+        debugger;
         this._messageService.add({severity:'success', summary:'Service Message', detail:'Mortagage account created Sucessfully'});
       });
     } else {

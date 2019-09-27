@@ -12,12 +12,12 @@
     </ng-template>
     <ng-template pTemplate="body" let-customer>
         <tr >
-            <td>{{customer.accountNumber}}</td>
-            <td>{{customer.accountType}}</td>
-            <td>{{customer.accountId}}</td>
-            <td>{{customer.firstName}} {{customer.lastName}}</td>
-            <td>{{customer.dateOfBirth}}</td>
-            <td>{{customer.gender}}</td>
+            <td>{{customer.customerNumber}}</td>
+            <td>{{customer.partnerType}}</td>
+            <td>{{customer.customerNumber}}</td>
+            <td>{{customer.firstName}} {{customer?.lastName}}</td>
+            <td>{{customer.birthDate | date: 'd/MM/yyyy'}}</td>
+            <td>Male</td>
             <td><i class="pi pi-arrow-right" style="font-size: 2em; color: #1976d2;" (click)="_showCustomerDetails(customer)"></i></td>
         </tr>
     </ng-template>

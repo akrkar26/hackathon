@@ -2,12 +2,12 @@
     <p-toast></p-toast>
     <p-card>
         <div class="ui-g">
-            <div class="ui-g-4">Account Number: <strong>{{customer?.accountNumber}}</strong></div>
-            <div class="ui-g-4">Account type: {{customer?.accountType}}</div>
-            <div class="ui-g-4">Customer Id: {{customer?.accountId}}</div>
+            <div class="ui-g-4">Account Number: <strong>{{customer?.customerNumber}}</strong></div>
+            <div class="ui-g-4">Account type: {{customer?.partnerType}}</div>
+            <div class="ui-g-4">Customer Id: {{customer?.customerNumber}}</div>
             <div class="ui-g-4">Customer Name: <strong>{{customer?.firstName}} {{customer?.lastName}}</strong></div>
-            <div class="ui-g-4">Date Of Birth: {{customer?.dateOfBirth}}</div>
-            <div class="ui-g-4">Gender: {{customer?.gender}}</div>
+            <div class="ui-g-4">Date Of Birth: {{customer?.birthDate | date: 'shortDate'}}</div>
+            <div class="ui-g-4">Gender: Male</div>
         </div>
     </p-card>
     <p-card>
